@@ -1,206 +1,79 @@
-* ,::before, ::after {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  html {
-    font-size: 100%;
-    display: block;
-  }
-  
-  body {
-    font-family: 'Lato',serif;
-    background-color: rgb(230,230,230);
-  }
-  
-  h2 {
-    font-family: 'Raleway', sans-serif;
-  }
-  
-  #header a {
-    text-decoration: none;
-    color: rgb(50,50,50);
-  }
-  
-  #header-img {
-    height: 7rem;
-    margin-left: 50px;
-    margin-bottom: 10px;
-  }
-  
-  #header {
-    display: flex;
-    justify-content: space-between;
-    font-size:1.5rem;
+<!DOCTYPE  html>
+<html lang="en>">
+  <head>
+    <meta charser="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <title> freeCodeCamp Survey Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
     
-    border-bottom: 1px solid black;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    background-color: rgb(230,230,230);
-    margin-bottom: 10rem;
-  }
-  
-  ul {
-    list-style-type: none;
-  }
-  
-  #header ul{
-    display: flex;
-    margin:50px 20px;
-  }
-  #header ul li{
-    margin: 0 50px;
-  }
-  
-  .container {
-    margin: 150px auto;
-    margin-left: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .info {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    
-    
-  }
-  .info h2{
-    font-size: 2rem;
-    font-weight: 800;
-  }
-  
-  #email {
-    height: 28px;
-    width: 20rem;
-    margin-top: 20px;
-    
-    font-size: 1rem;
-    border: transparent;
-  }
-  
-  #submit {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 10rem;
-    height: 3rem;
-    font-size: 1.3rem;
-    margin-top: 10px;
-  }
-  #submit:hover {
-    background-color: black;
-    color: rgb(230,230,230);
-  }
-  
-  .grid {
-    display: grid;
-    grid-template-columns: 10rem 40rem;
-    margin: 70px 0;
-    
-  }
-  .icon {
-    font-size: 60px;
-    display: inline-block;
-  }
-  .desc h2{
-    font-weight: 900;
-  }
-  .desc p{
-    font-size:1.2rem;
-  }
-  #models{
-    margin-top: 100px;
-  }
-  .pics {
-    display: grid;
-    grid-template-columns: 40rem 40rem;
-  place-items: center;
-  }
-  .picture {
-    height: 36rem;
-  }
-  #pricing {
-    display: grid;
-    grid-template-columns: 30rem 30rem 30rem;
-    place-items: center;
-    margin-top: 100px;
-  }
-  
-  .product {
-    border: 1px solid black;
-    text-align: center;
-    height: 20rem;
-    width: 20rem;
-    
-  }
-  
-  .level {
-    font-size: 2rem;
-    padding: 20px 0;
-    padding-bottom: 20px;
-    
-    width: 100%;
-    font-weight: bold;
-    background-color: rgb(215,215,215);
-  }
-  
-  .product h2 {
-    margin: 20px 0;
-    font-size: 2rem;
-  }
-  .product ul{
-    font-size: 1.13rem;
-    margin: 20px 0;
-  }
-  .product ul li{
-    margin: 10px 0;
-  }
-  #btn {
-    width: 9rem;
-    height: 3rem;
-    font-size: 1.25rem;
-    margin-top: 5px;
-  }
-  #btn:hover {
-    background-color: black;
-    color: rgb(230,230,230);
-  }
-  
-  #video {
-    display: none;
-  }
-  
-  footer ul{
-    display: flex;
-    font-size: 1.1rem;
-  }
-  footer ul li{
-    padding: 0 20px;
-  }
-  footer {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left:60rem;
-    height: 5rem;
-    background-color: rgb(215,215,215);
-    padding-top: 20px;
-    margin-top: 0;
-    
-  }
-  footer span{
-    margin-left:65px;
-  }
-  #features {
-    margin-top: 90px;
-  }
-  
-  @media (max-width:1800px) {
-    
-  }
+    <h1 id="title">freeCodeCamp Survey Form</h1>
+    <p id="description">Thank you for taking the time to help  us improve the platform</p>
+
+    <form id="survey-form" action="https://register-demo.freecodecamp.org" method="post">
+       <fieldset>
+         <label id="name-label" for="namel"> Name<input name="name" id="name" type="text" placeholder="Enter Your Name" Required> </label>
+         <label id="email-label" for="email"> Email <input name="email" id="email" type="email" placeholder="Enter Your Email" Required> </label>
+         <label id="number-label" for="number"> Age <input name="number" id="number" min="13" max="120"
+         type="number" placeholder="Enter Your Age" Required> </label>
+
+         <label for="dropdown">Which option best describes your current role?
+           <select id="dropdown" name="dropdown">
+             <option value="">Select current role</option>
+             <option value="1">Student</option>
+             <option value="2">Full time Job</option>
+             <option value="3">Full time Learner</option>
+             <option value="4">Prefer not to say</option>
+             <option value="5">Other</option>
+            </select></label>
+        </fieldset>
+        <fieldset>
+            <legend>Would you recommend freeCodeCamp to a friend</legend>
+         
+            <label for="recc"><input id="recc" type="radio" name="recc" value="recc" checked> Definetly</label>
+            <label for="recc1"><input id="recc1" type="radio" name="recc" value="recc1"> Maybe</label>
+            <label for="recc2"> <input id="recc2" type="radio" name="recc" value="recc2" > Not sure</label>
+            
+        </fieldset>
+        <fieldset>
+          <label for="dropdown">What is your favorite feature of freeCodeCamp?
+           <select id="dropdown" name="dropdown">
+             <option value="">Select an option</option>
+             <option value="1">Challenges</option>
+             <option value="2">Projects</option>
+             <option value="3">Community</option>
+             <option value="4">Open Source</option>
+            </select></label>
+        </fieldset>
+
+        <fieldset>
+          <legend> What would you like to see improved?<small>(Check all that apply)</small></legend>
+          <label for="improve1"> <input type="checkbox" id="improve1" name="improve" value="improve1" >Front-end Projects </label>
+          <label for="improve2"> <input type="checkbox" id="improve2" name="improve" value="improve2" >Back-end Projects </label>
+          <label for="improve3"> <input type="checkbox" id="improve3" name="improve" value="improve3" >Data Vizualisation</label>
+          <label for="improve4"> <input type="checkbox" id="improve4" name="improve" value="improve4" >Challenges</label>
+          <label for="improve5"> <input type="checkbox" id="improve5" name="improve" value="improve5" >Open source Community </label>
+          <label for="improve6"> <input type="checkbox" id="improve6" name="improve" value="improve6" >Gitter help rooms </label>
+          <label for="improve7"> <input type="checkbox" id="improve7" name="improve" value="improve7" >Videos </label>
+          <label for="improve8"> <input type="checkbox" id="improve8" name="improve" value="improve8" >City Meetups </label>
+          <label for="improve9"> <input type="checkbox" id="improve9" name="improve" value="improve9" >Wiki </label>
+          <label for="improve10"> <input type="checkbox" id="improve10" name="improve" value="improve10" >Forum </label>
+          <label for="improve11"> <input type="checkbox" id="improve11" name="improve" value="improve11" >Additional courses </label>
+        </fieldset>
+       
+       <fieldset>
+         <label>Any comments or suggestions?
+         <textarea id="comment" name="comment" rows="5" cols="60" placeholder="Write your comment here..."></textarea>
+         </label>
+     </fieldset>
+
+         <fieldset>
+         <label>
+           <input type="submit" value="Submit"
+           id="submit" />
+         </label>
+         </fieldset>
+    </form>  
+  </body>
+</html>
